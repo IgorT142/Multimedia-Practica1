@@ -51,7 +51,7 @@ var game = {
 
 		//"Kindergarten" by Gurdonark
 		//http://ccmixter.org/files/gurdonark/26491 is licensed under a Creative Commons license
-		game.backgroundMusic = loader.loadSound('audio/gurdonark-kindergarten');
+		game.backgroundMusic = loader.loadSound('audio/NarutoTheme');
 
 		game.slingshotReleasedSound = loader.loadSound("audio/released");
 		game.bounceSound = loader.loadSound('audio/bounce');
@@ -409,7 +409,7 @@ var levels = {
 	// Level data
 	data:[
 	 {// First level
-		foreground:'desert-foreground',
+		foreground:'green-field',
 		background:'clouds-background',
 		entities:[
 			{type:"ground", name:"dirt", x:500,y:440,width:1000,height:20,isStatic:true},
@@ -428,7 +428,7 @@ var levels = {
 		]
 	 },
 		{   // Second level
-			foreground:'desert-foreground',
+			foreground:'level2',
 			background:'clouds-background',
 			entities:[
 				{type:"ground", name:"dirt", x:500,y:440,width:1000,height:20,isStatic:true},

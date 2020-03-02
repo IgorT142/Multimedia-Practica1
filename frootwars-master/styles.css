@@ -15,13 +15,15 @@
 /* Game Starting Menu Screen */
 #gamestartscreen {
 	padding-top:250px;
+	padding-right: 150px;
 	height:230px;
 	text-align:center;
 }
 
 #gamestartscreen img {
-	margin:10px;
+	margin:10px 15px;
 	cursor:pointer;
+
 }
 
 /* Level Selection Screen */
