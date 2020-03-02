@@ -418,6 +418,15 @@ var game = {
 		game.context.stroke();
 	},
 
+	changeBackground: function () {
+		let container = document.querySelector('.entero');
+		if (container.id == 'gamecontainer')
+			container.setAttribute('id', 'newBackground');
+		else {
+			container.setAttribute('id', 'gamecontainer');
+			
+		}
+	}
 }
 
 var levels = {

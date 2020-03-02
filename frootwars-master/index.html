@@ -10,7 +10,7 @@
 	</head>
 	
 	<body>
-		<div id="gamecontainer">
+		<div id="gamecontainer" class ="entero">
 			<canvas id="gamecanvas" width="640" height="480" class="gamelayer">			
 			</canvas>
 			
@@ -22,7 +22,7 @@
 			
 			<div id="gamestartscreen" class="gamelayer">
 				<img src="images/icons/play.png" alt="Play Game" onclick = "game.showLevelScreen();"><br>
-				<img src="images/icons/settings.png" alt="Settings">
+				<img src="images/icons/settings.png" alt="Settings" onclick ="game.changeBackground();">
 			</div>
 			
 			<div id="levelselectscreen" class="gamelayer">

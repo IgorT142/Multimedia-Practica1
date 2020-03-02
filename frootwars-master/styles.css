@@ -4,7 +4,12 @@
 	background: url(images/backgrounds/main.jpg);
 	border: 1px solid black;
 }
-
+#newBackground {
+	width:640px;
+	height:480px;
+	background: url(images/backgrounds/main2.jpg);
+	border: 1px solid black;
+}
 .gamelayer {
 	width:640px;
 	height:480px;
