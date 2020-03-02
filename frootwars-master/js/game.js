@@ -52,6 +52,7 @@ var game = {
 		//"Kindergarten" by Gurdonark
 		//http://ccmixter.org/files/gurdonark/26491 is licensed under a Creative Commons license
 		game.backgroundMusic = loader.loadSound('audio/NarutoTheme');
+		game.endingWin = loader.loadSound('audio/NarutoEndingWin');
 		game.endingMusic = loader.loadSound('audio/NarutoEnding');
 		game.villainDeath = loader.loadSound('audio/Nandatto');
 		game.slingshotReleasedSound = loader.loadSound("audio/mindTransfer");
@@ -93,20 +94,24 @@ var game = {
 	},
 	showLevelScreen: function () {
 		game.endingMusic.pause();
-		game.endingMusic.currentTime=0;
+		game.endingWin.pause();
+		game.endingWin.currentTime = 0;
+		game.endingMusic.currentTime = 0;
 		$('.gamelayer').hide();
 		$('#levelselectscreen').show('slow');
 	},
 	restartLevel: function () {
 		game.endingMusic.pause();
-		game.endingMusic.currentTime=0;
+		game.endingMusic.currentTime = 0;
+		game.endingWin.pause();
+		game.endingWin.currentTime = 0;
 		window.cancelAnimationFrame(game.animationFrame);
 		game.lastUpdateTime = undefined;
 		levels.load(game.currentLevel.number);
 	},
 	startNextLevel: function () {
 		game.endingMusic.pause();
-		game.endingMusic.currentTime=0;
+		game.endingMusic.currentTime = 0;
 		window.cancelAnimationFrame(game.animationFrame);
 		game.lastUpdateTime = undefined;
 		levels.load(game.currentLevel.number + 1);
@@ -302,11 +307,12 @@ var game = {
 				$("#playnextlevel").show();
 			} else {
 				$('#endingmessage').html('All Levels Complete. Well Done!!!');
+				game.endingWin.play();
 				$("#playnextlevel").hide();
 			}
 		} else if (game.mode == "level-failure") {
 			$('#endingmessage').html('Failed. Play Again?');
-			game.endingMusic.play();	
+			game.endingMusic.play();
 			$("#playnextlevel").hide();
 		}
 
