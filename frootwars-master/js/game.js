@@ -53,11 +53,11 @@ var game = {
 		//http://ccmixter.org/files/gurdonark/26491 is licensed under a Creative Commons license
 		game.backgroundMusic = loader.loadSound('audio/NarutoTheme');
 
-		game.slingshotReleasedSound = loader.loadSound("audio/released");
+		game.slingshotReleasedSound = loader.loadSound("audio/mindTransfer");
 		game.bounceSound = loader.loadSound('audio/bounce');
 		game.breakSound = {
-			"glass":loader.loadSound('audio/glassbreak'),
-			"wood":loader.loadSound('audio/woodbreak')
+			"glass":loader.loadSound('audio/jutsu_effect'),
+			"wood":loader.loadSound('audio/jutsu_effect')
 		};
 
 
