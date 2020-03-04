@@ -500,6 +500,23 @@ var levels = {
 				{ type: "hero", name: "shuriken", x: 80, y: 405 },
 				{ type: "hero", name: "kunai", x: 140, y: 405 }
 			]
+		},
+		{ // Fourth level
+			foreground: 'level3',
+			background: 'clouds-background',
+			entities: [
+				{ type: "ground", name: "dirt", x: 500, y: 440, width: 1000, height: 20, isStatic: true },
+				{ type: "ground", name: "wood", x: 185, y: 390, width: 30, height: 80, isStatic: true },
+
+				{ type: "block", name: "wood", x: 480, y: 380, angle: 90, width: 200, height: 75 },
+				{ type: "block", name: "wood", x: 800, y: 380, angle: 90, width: 200, height: 75 },
+				{ type: "block", name: "glass", x: 480, y: 300, angle: 90, width: 75, height: 50},
+				{ type: "block", name: "glass", x: 800, y: 300, angle: 90, width: 75, height: 50},
+
+				{ type: "villain", name: "ninja3", x: 640, y: 380, calories: 590 },
+
+				{ type: "hero", name: "shuriken", x: 80, y: 405 }
+			]
 		}
 	],
 
