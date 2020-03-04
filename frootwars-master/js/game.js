@@ -493,8 +493,8 @@ var levels = {
 				{ type: "block", name: "glass", x: 550, y: 290, width: 150, height: 10 },
 
 				{ type: "villain", name: "ninja1", x: 550, y: 380, calories: 590 },
-				{ type: "villain", name: "ninja2", x: 550, y: 315, calories: 590 },
-				{ type: "villain", name: "ninja3", x: 550, y: 155, calories: 590 },
+				{ type: "villain", name: "ninja2", x: 550, y: 315, calories: 420 },
+				{ type: "villain", name: "ninja3", x: 550, y: 155, calories: 150 },
 
 				{ type: "hero", name: "smokeBomb", x: 30, y: 415 },
 				{ type: "hero", name: "shuriken", x: 80, y: 405 },
@@ -513,9 +513,30 @@ var levels = {
 				{ type: "block", name: "glass", x: 480, y: 300, angle: 90, width: 75, height: 50},
 				{ type: "block", name: "glass", x: 800, y: 300, angle: 90, width: 75, height: 50},
 
-				{ type: "villain", name: "ninja3", x: 640, y: 380, calories: 590 },
+				{ type: "villain", name: "ninja3", x: 640, y: 380, calories: 150 },
 
 				{ type: "hero", name: "shuriken", x: 80, y: 405 }
+			]
+		},
+		{ // Fifth level
+			foreground: 'level3',
+			background: 'clouds-background',
+			entities: [
+				{ type: "ground", name: "dirt", x: 500, y: 440, width: 1000, height: 20, isStatic: true },
+				{ type: "ground", name: "wood", x: 185, y: 390, width: 30, height: 80, isStatic: true },
+
+				{ type: "block", name: "wood", x: 650, y: 380, width: 400, height: 50 },
+				{ type: "block", name: "wood", x: 650, y: 360, width: 300, height: 50 },
+				{ type: "block", name: "wood", x: 650, y: 340, width: 200, height: 50 },
+				{ type: "block", name: "wood", x: 650, y: 320, width: 100, height: 50 },
+
+				{ type: "villain", name: "ninja3", x: 530, y: 350, calories: 150 },
+				{ type: "villain", name: "ninja1", x: 650, y: 310, calories: 590 },
+				{ type: "villain", name: "ninja2", x: 800, y: 370, calories: 420 },
+
+				{ type: "hero", name: "shuriken", x: 80, y: 405 },
+				{ type: "hero", name: "smokeBomb", x: 30, y: 415 }
+				
 			]
 		}
 	],
@@ -590,12 +611,13 @@ var entities = {
 			restitution: 0.2,
 		},
 		"ninja1": {
-			shape: "circle",
-			fullHealth: 40,
-			radius: 25,
+			shape: "rectangle",
+			fullHealth: 100,
+			width: 40,
+			height: 60,
 			density: 1,
 			friction: 0.5,
-			restitution: 0.4,
+			restitution: 0.7,
 		},
 		"ninja2": {
 			shape: "rectangle",
